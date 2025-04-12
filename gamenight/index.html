@@ -21,10 +21,20 @@
   <main>
     <div class="container">
       <section id="player-list" class="row">
-        
+
       </section>
       <section class="row">
-
+        <div class="col-md-4">
+          <form onsubmit="app.PlayersController.addPlayer(event)">
+            <div>
+              <label for="name">Player Name:</label>
+              <input type="text" minlength="2" maxlength="15" name="playerName" required />
+            </div>
+            <div>
+              <button type="submit">Add Player</button>
+            </div>
+          </form>
+        </div>
       </section>
     </div>
 
