@@ -10,7 +10,8 @@ class ObservableAppState extends EventEmitter {
     // AppState.js
 
     players = [
-      new Player('Dane')
+      new Player('Dane'),
+      new Player('ToysForBob')
     ]
 }
 

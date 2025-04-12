@@ -8,9 +8,10 @@ export class PlayersController {
 
     // PlayersController.js
     drawPlayers(){
-    const players = /* players array from AppState */
-    let playerContent = ''
-    players.forEach(player, /* ... */)
-    //... draw to page
+    const players = AppState.players;
+    let playerContent = '';
+    players.forEach(player => playerContent += player.PlayerTemplateCard);
+    const playerListElement = document.getElementById('player-list');
+    playerListElement.innerHTML = playerContent;
   }
 }
