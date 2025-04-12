@@ -8,11 +8,16 @@ export class Player {
       // Additional properties can be added here as needed
     }
 
+    //REVIEW Is there a way to help with html for the string with help outs in the index.html?
     get PlayerTemplateCard(){
     return /* html */`
         <div class="card">
             <div class="card-body">
                 ${this.name} - ${this.score}
+            </div>
+            <div>
+                <button onclick="app.PlayersController.decreasePlayerScore('${this.name}')" role="button"> - </button>
+                <button onclick="app.PlayersController.increasePlayerScore('${this.name}')" role="button"> + </button>
             </div>
         </div>
         `;
