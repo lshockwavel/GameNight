@@ -1,6 +1,16 @@
 export class Player {
+
+    // static id to keep track of for the next id. Using Int like values
+    static counterId = 1;
+    
     constructor(name) {
       this.name = name;
+
+      //Setting the 
+      this.id = Player.counterId;
+
+      //incrementing the value for the next user
+      Player.counterId++;
 
       // Their score is defaulted to start at 0
       this.score = 0;
@@ -18,8 +28,8 @@ export class Player {
                         ${this.name} - ${this.score}
                     </div>
                     <div>
-                        <button onclick="app.PlayersController.decreasePlayerScore('${this.name}')" role="button" class="mdi mdi-minus"> </button>
-                        <button onclick="app.PlayersController.increasePlayerScore('${this.name}')" role="button" class="mdi mdi-plus-circle"> </button>
+                        <button onclick="app.PlayersController.decreasePlayerScore('${this.id}')" role="button" class="mdi mdi-minus"> </button>
+                        <button onclick="app.PlayersController.increasePlayerScore('${this.id}')" role="button" class="mdi mdi-plus-circle"> </button>
                     </div>
                 </div>
             </div>

@@ -5,21 +5,26 @@ import { Player } from "../models/Player.js";
 class PlayerService {
     
     //Increase the player score by 1
-    increasePlayerScore(playerName)
+    increasePlayerScore(playerId)
     {
-        const player = AppState.players.find(player => player.name == playerName);
+        const player = AppState.players.find(player => player.id == playerId);
         player.score++;
 
-        console.log("service score", player.score, playerName);
+        console.log("service score", player.score, playerId);
     }
 
     //Decreases Player Score by 1
-    decreasePlayerScore(playerName)
+    decreasePlayerScore(playerId)
     {
-        const player = AppState.players.find(player => player.name == playerName);
-        player.score--;
+        // const player = AppState.players.find(player => player.name == playerName);
+        const player = AppState.players.find(player => player.id == playerId);
 
-        console.log("service score", player.score, playerName);
+        if(player.score > 0)
+        {
+            player.score--;
+        }
+        
+        console.log("service score", player.score, playerId);
     }
 
     //NOTE WIP re-arranging players

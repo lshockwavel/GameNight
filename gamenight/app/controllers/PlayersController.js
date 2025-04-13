@@ -8,17 +8,17 @@ export class PlayersController {
     }
 
     //Calls to increase Player score and to redraw the players
-    increasePlayerScore(playerName)
+    increasePlayerScore(playerId)
     {
-        console.log('Score increased', playerName);
-        playerService.increasePlayerScore(playerName);
+        console.log('Score increased', playerId);
+        playerService.increasePlayerScore(playerId);
         this.drawPlayers();
     }
 
-    decreasePlayerScore(playerName)
+    decreasePlayerScore(playerId)
     {
-        console.log('Score decreased', playerName);
-        playerService.decreasePlayerScore(playerName);
+        console.log('Score decreased', playerId);
+        playerService.decreasePlayerScore(playerId);
         this.drawPlayers();
     }
 
